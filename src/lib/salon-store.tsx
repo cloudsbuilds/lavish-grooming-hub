@@ -28,7 +28,7 @@ export type Appointment = {
   serviceName: string;
   date: string;
   time: string;
-  notes?: string;
+  notes?: string | undefined;
   status: "Pending" | "Confirmed";
   createdAt: string;
 };

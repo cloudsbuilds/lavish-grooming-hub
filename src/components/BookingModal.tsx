@@ -32,7 +32,7 @@ export function BookingModal({
   initialServiceId?: string;
 }) {
   const { services, addAppointment } = useSalon();
-  const [serviceId, setServiceId] = useState(initialServiceId ?? services[0].id);
+  const [serviceId, setServiceId] = useState(initialServiceId ?? services[0]!.id);
   const [date, setDate] = useState(todayISO());
   const [time, setTime] = useState("");
   const [name, setName] = useState("");
@@ -51,7 +51,7 @@ export function BookingModal({
   }, [open, initialServiceId]);
 
   const selected = useMemo(
-    () => services.find((s) => s.id === serviceId) ?? services[0],
+    () => services.find((s) => s.id === serviceId) ?? services[0]!,
     [services, serviceId],
   );
 
