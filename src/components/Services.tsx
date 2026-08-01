@@ -72,7 +72,7 @@ export function Services({ onBook }: { onBook: (serviceId: string) => void }) {
                 <button
                   type="button"
                   onClick={() => onBook(service.id)}
-                  className="tap flex items-center gap-1.5 rounded-full border border-gold/40 px-4 py-2 text-xs font-semibold tracking-[0.12em] text-gold uppercase hover:[@media(hover:hover)]:bg-gold-gradient hover:[@media(hover:hover)]:text-primary-foreground"
+                  className="tap flex items-center gap-1.5 rounded-full border border-gold/40 px-4 py-2 text-xs font-semibold tracking-[0.12em] text-gold uppercase [@media(hover:hover)]:hover:bg-gold-gradient [@media(hover:hover)]:hover:text-primary-foreground"
                 >
                   <Flame className="h-3.5 w-3.5" /> Book
                 </button>

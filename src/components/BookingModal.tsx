@@ -29,7 +29,7 @@ export function BookingModal({
 }: {
   open: boolean;
   onClose: () => void;
-  initialServiceId?: string;
+  initialServiceId?: string | undefined;
 }) {
   const { services, addAppointment } = useSalon();
   const [serviceId, setServiceId] = useState(initialServiceId ?? services[0]!.id);
